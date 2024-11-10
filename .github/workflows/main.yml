@@ -37,6 +37,13 @@ jobs:
         pip install gunicorn
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: Validando software instalado
+      run: |
+        echo pip freeze
+        pip freeze
+        echo pip3 freeze
+        pip3 freeze
+
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
